@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reto - Cálculo de Figuras Geométricas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Círculo</h5>
+            <button type="button" onclick="abrirModal('Círculo', 'perimetro')" class="btn btn-principal">Perímetro</button>
+            <button type="button" onclick="abrirModal('Círculo', 'area')" class="btn btn-principal">Área</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Triángulo</h5>
+            <button type="button" onclick="abrirModal('Triángulo', 'perimetro')" class="btn btn-principal">Perímetro</button>
+            <button type="button" onclick="abrirModal('Triángulo', 'area')" class="btn btn-principal">Área</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Rectángulo</h5>
+            <button type="button" onclick="abrirModal('Rectángulo', 'perimetro')" class="btn btn-principal">Perímetro</button>
+            <button type="button" onclick="abrirModal('Rectángulo', 'area')" class="btn btn-principal">Área</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Cuadrado</h5>
+            <button type="button" onclick="abrirModal('Cuadrado', 'perimetro')" class="btn btn-principal">Perímetro</button>
+            <button type="button" onclick="abrirModal('Cuadrado', 'area')" class="btn btn-principal">Área</button>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6 offset-md-3">
+          <button type="button" onclick="window.location.href = 'index.html'" class="btn btn-principal">Regresar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Ventana Modal -->
+  <div class="modal" id="modalCalculo">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitulo"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3" id="radioContainer" style="display: none;">
+            <label for="inputRadio" class="form-label">Radio:</label>
+            <input type="number" id="inputRadio" class="form-control" required>
+          </div>
+          <div class="mb-3" id="ladosContainer" style="display: none;">
+            <label for="inputLado1" class="form-label">Lado 1:</label>
+            <input type="number" id="inputLado1" class="form-control" required>
+            <label for="inputLado2" class="form-label">Lado 2:</label>
+            <input type="number" id="inputLado2" class="form-control" required>
+            <label for="inputLado3" class="form-label">Lado 3:</label>
+            <input type="number" id="inputLado3" class="form-control" required>
+          </div>
+          <div class="mb-3" id="ladoContainer" style="display: none;">
+            <label for="inputLado1cuadrado" class="form-label">Lado 1:</label>
+            <input type="number" id="inputLado1cuadrado" class="form-control" required>
+
+          </div>
+          <div class="mb-3" id="baseAlturaContainer" style="display: none;">
+            <label for="inputBase" class="form-label">Base:</label>
+            <input type="number" id="inputBase" class="form-control" required>
+            <label for="inputAltura" class="form-label">Altura:</label>
+            <input type="number" id="inputAltura" class="form-control" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="calcular()" class="btn btn-principal">Calcular</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Retos_js/reto6.js"></script>
+</body>
+</html>
